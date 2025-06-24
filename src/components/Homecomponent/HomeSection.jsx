@@ -3,8 +3,7 @@ import video from "../../assets/Home/video.mp4";
 
 const HomeSection = () => {
   return (
-    <div className="relative h-screen w-full overflow-hidden">
-      {/* 🔹 Background Video */}
+    <div className="relative h-screen w-full overflow-hidden mt-2">
       <video
         autoPlay
         loop
@@ -15,10 +14,8 @@ const HomeSection = () => {
         Your browser does not support the video tag.
       </video>
 
-      {/* 🔹 Dark Overlay */}
       <div className="absolute top-0 left-0 w-full h-full bg-black/70 z-10"></div>
 
-      {/* 🔹 Text Content */}
       <div className="absolute z-20 text-white top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center max-w-3xl px-4">
         <p className="text-3xl md:text-5xl  font-bold mb-4  leading-tight">Welcome to SGRRSJI Builders</p>
        
