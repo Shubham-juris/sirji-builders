@@ -22,21 +22,21 @@ const buildings = [
 
 const BuildingCard = ({ name, img, description }) => {
   return (
-    <div className="relative rounded-2xl overflow-hidden shadow-md group mt-20">
+    <div className="relative rounded-2xl overflow-hidden shadow-md group mt-5">
       <img
         src={img}
         alt={name}
-        className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+        className="w-full  h-64 object-cover group-hover:scale-105 transition-transform duration-300"
       />
 
       {description ? (
-        <div className="absolute inset-0 bg-black bg-opacity-60 text-white p-4 flex flex-col justify-end opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          <h3 className="text-lg font-semibold">{name}</h3>
-          <p className="text-sm mt-1">{description}</p>
+        <div className="absolute inset-0  bg-opacity-60 text-white p-4 flex flex-col justify-end opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <h3 className="text-lg text-b  font-semibold">{name}</h3>
+          <p className="text-sm mt-1 ">{description}</p>
           
         </div>
       ) : (
-        <div className="absolute bottom-4 left-4 text-white text-lg font-semibold drop-shadow-lg">
+        <div className="absolute bottom-4 left-4  text-white text-lg font-semibold drop-shadow-lg">
           {name}
         </div>
       )}

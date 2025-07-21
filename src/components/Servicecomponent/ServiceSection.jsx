@@ -5,32 +5,46 @@ import service1 from "../../assets/service/img1.jpg";
 import service2 from "../../assets/service/img2.avif";
 import service3 from "../../assets/service/img3.webp";
 import service4 from "../../assets/service/img4.jpeg";
+import service5 from "../../assets/service/img5.jpg";
+import service6 from "../../assets/service/img6.jpg";
 
 const services = [
   {
     title: "Building Construction",
     image: service1,
+    description: "We deliver durable and innovative construction solutions for all building types.",
   },
   {
     title: "Architecture Design",
     image: service2,
+    description: "Our post-construction services give you peace of mind knowing we're still here for you.",
+    viewMore: true,
   },
   {
     title: "Building Renovation",
     image: service3,
-    description:
-      "Our post-construction services gives you peace of mind knowing that we are still here for you even after.",
-    viewMore: true,
+    description: "We modernize and restore spaces while maintaining structural integrity.",
+  },
+  {
+    title: "Flooring & Roofing",
+    image: service5,
+    description: "We provide high-quality flooring and roofing solutions to enhance your structure.",
   },
   {
     title: "Building Maintenance",
     image: service4,
+    description: "Ongoing care and attention to ensure your property stays in top condition.",
+  },
+  {
+    title: "Project Management",
+    image: service6,
+    description: "From planning to completion, we manage your construction projects seamlessly.",
   },
 ];
 
 const ServicesSection = () => {
   return (
-    <section className="bg-[#e6f2fb] py-16 mt-15">
+    <section className="bg-[#e6f2fb] py-16 mt-5">
       <div className="max-w-7xl mx-auto px-4">
         {/* Section Heading */}
         <div className="text-center mb-12">
@@ -44,37 +58,37 @@ const ServicesSection = () => {
         </div>
 
         {/* Services Grid */}
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service, index) => (
             <div
               key={index}
-              className="relative rounded-2xl overflow-hidden group shadow-md"
+              className="relative rounded-2xl overflow-hidden group shadow-lg cursor-pointer"
             >
+              {/* Image */}
               <img
                 src={service.image}
                 alt={service.title}
-                className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-black/50 p-4 flex flex-col justify-end text-white">
-                <h3 className="text-lg font-semibold">{service.title}</h3>
-                {service.description && (
-                  <p className="text-sm mt-2">{service.description}</p>
-                )}
+
+              {/* Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent p-4 flex flex-col justify-end transition-all duration-300">
+                <h3 className="text-white text-lg font-semibold relative z-10">{service.title}</h3>
+
+                {/* Description for all */}
+                <p className="text-sm text-white mt-2 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500 relative z-10">
+                  {service.description}
+                </p>
+
+                {/* View More Button if exists */}
                 {service.viewMore && (
-                  <button className="mt-3 text-yellow-400 hover:underline text-sm flex items-center gap-1">
-                    View More <ArrowRight size={16} />
+                  <button className="text-yellow-400 mt-3 inline-flex items-center text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-500 relative z-10">
+                    View More <ArrowRight className="ml-1 h-4 w-4" />
                   </button>
                 )}
               </div>
             </div>
           ))}
-        </div>
-
-        {/* View All Button */}
-        <div className="text-center mt-10">
-          <button className="bg-yellow-400 hover:bg-yellow-300 text-black font-semibold px-6 py-3 rounded-full flex items-center gap-2 mx-auto">
-            View All Services <ArrowRight size={18} />
-          </button>
         </div>
       </div>
     </section>

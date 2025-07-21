@@ -9,7 +9,7 @@ const Navbar = () => {
   const toggleMenu = () => setOpen(!open);
 
   return (
-    <nav className="w-full fixed top-0 left-0 z-20 bg-black/40 backdrop-blur-md text-white">
+    <nav className="w-full fixed top-0 left-0 z-20 bg-black text-white">
       <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
         
         {/* 🔹 Logo */}
@@ -44,7 +44,7 @@ const Navbar = () => {
 
       {/* 🔹 Mobile Menu */}
       {open && (
-        <div className="md:hidden bg-black/90 text-white px-4 py-6 space-y-4">
+        <div className="md:hidden bg-black text-white px-4 py-6 space-y-4">
           <ul className="flex flex-col gap-4 text-lg">
             <li><Link to="/" onClick={toggleMenu} className="hover:text-orange-400">Home</Link></li>
             <li><Link to="/about" onClick={toggleMenu} className="hover:text-orange-400">About Us</Link></li>

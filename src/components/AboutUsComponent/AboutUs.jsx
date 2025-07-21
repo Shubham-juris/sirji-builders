@@ -7,7 +7,6 @@ const AboutUs = () => {
     <section className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center gap-10">
         
-        {/* 🔹 Left Image */}
         <div className="md:w-1/2 w-full">
           <img
             src={aboutImg}
@@ -16,7 +15,6 @@ const AboutUs = () => {
           />
         </div>
 
-        {/* 🔹 Right Content */}
         <div className="md:w-1/2 w-full space-y-6">
           <p className="text-yellow-500 font-semibold uppercase text-sm tracking-wide">About Us</p>
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 leading-snug">
@@ -28,7 +26,6 @@ const AboutUs = () => {
             and leveraging modern technology.
           </p>
 
-          {/* 🔹 Features */}
           <div className="bg-blue-50 rounded-xl p-6 space-y-4">
             {[
               "Comprehensive Services",
@@ -42,7 +39,6 @@ const AboutUs = () => {
             ))}
           </div>
 
-          {/* 🔹 Quote & Call */}
           <div className="flex flex-col sm:flex-row items-center gap-6 pt-4">
             
             <div className="text-center sm:text-left">
