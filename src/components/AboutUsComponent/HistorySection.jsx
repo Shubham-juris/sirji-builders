@@ -5,7 +5,6 @@ const HistorySection = () => {
   return (
     <section className="bg-[#eaf6fd] py-20 px-6 md:px-24">
       <div className="flex flex-col md:flex-row items-center gap-12">
-        {/* Left - Image with card */}
         <div className="relative w-full md:w-1/2">
           <img
             src={image}
@@ -18,7 +17,6 @@ const HistorySection = () => {
           </div>
         </div>
 
-        {/* Right - Content */}
         <div className="w-full md:w-1/2 text-center md:text-left">
           <p className="text-sm font-semibold text-yellow-500 uppercase mb-2">Our History</p>
           <h2 className="text-3xl md:text-5xl font-bold text-[#0f172a] mb-6 leading-tight">
